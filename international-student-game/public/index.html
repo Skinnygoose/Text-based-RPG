@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Cards</title>
+</head>
+<body>
+    <h1>Add Story Card</h1>
+    <form id="storyForm">
+        <input type="text" placeholder="Title" name="title" required />
+        <input type="text" placeholder="Content" name="content" required />
+        <input type="number" placeholder="Chapter" name="chapter" required />
+        <button type="submit">Add Story</button>
+    </form>
+
+    <h1>Add Question Card</h1>
+    <form id="questionForm">
+        <input type="text" placeholder="Question" name="question" required />
+        <input type="text" placeholder="Options (comma separated)" name="options" required />
+        <input type="text" placeholder="Correct Answer" name="correctAnswer" required />
+        <input type="number" placeholder="Chapter" name="chapter" required />
+        <button type="submit">Add Question</button>
+    </form>
+
+    <script>
+        document.getElementById('storyForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+
+            await fetch('http://localhost:5000/api/stories', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+        });
+
+        document.getElementById('questionForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = {
+                ...Object.fromEntries(formData.entries()),
+                options: formData.get('options').split(','), // Convert string to array
+            };
+
+            await fetch('http://localhost:5000/api/cards', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+        });
+    </script>
+</body>
+</html>
