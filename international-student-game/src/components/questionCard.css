@@ -1,0 +1,56 @@
+.question-card {
+    width: 80%;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #f0f8ff; /* Light blue background */
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    text-align: center;
+    border: 2px solid #007acc; /* Blue border */
+  }
+  
+  .question-card h2 {
+    font-size: 24px;
+    color: #1c1c1c; /* Dark text color */
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .options button {
+    padding: 12px 25px;
+    background-color: #007acc; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  }
+  
+  .options button:hover {
+    background-color: #005f99; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .options button.selected {
+    background-color: #4caf50; /* Green for selected option */
+  }
+  
+  .options button:active {
+    background-color: #004d80; /* Even darker blue when active */
+    transform: translateY(0); /* Return to original position */
+  }
+  
+  p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  

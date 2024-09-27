@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import './questionCard.css'; // Assuming you have a separate CSS file for styling the question card
+import { fetchNextCard } from './cardNavigation'; // Import the cardNavigation function
+import './questionCard.css' 
 
 const QuestionCard = () => {
   const [questionCard, setQuestionCard] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null); // Track the selected option
 
   useEffect(() => {
-    // Fetch the initial question card from the API when the component mounts
-    const fetchQuestionCard = async () => {
+    // Fetch the initial question card when the component mounts
+    const fetchInitialQuestionCard = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/cards'); 
-        const cardData = response.data[0]; 
-        setQuestionCard(cardData);
+        const initialCard = await fetchNextCard('66f67a425acd51085a335da7', 'question'); // Assuming initial card is a question card
+        console.log("Initial Card Fetched: ", initialCard); // Add this log to check the data
+        setQuestionCard(initialCard);
       } catch (error) {
-        console.error('Error fetching the question card:', error);
+        console.error('Error fetching the initial question card:', error);
       }
     };
-
-    fetchQuestionCard();
+  
+    fetchInitialQuestionCard();
   }, []);
+  
 
   // Function to handle option selection
   const handleOptionClick = async (option) => {
@@ -28,8 +29,7 @@ const QuestionCard = () => {
     // Fetch the next card based on the selected option's nextCardId
     if (option.nextCardId) {
       try {
-        const response = await axios.get(`http://localhost:5000/api/cards/${option.nextCardId}`);
-        const nextCard = response.data;
+        const nextCard = await fetchNextCard(option.nextCardId, 'question'); // Fetch the next question card
         setQuestionCard(nextCard); // Set the next card to display
         setSelectedOption(null); // Reset the selected option for the new card
       } catch (error) {
