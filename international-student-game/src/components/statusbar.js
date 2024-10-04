@@ -22,15 +22,9 @@ import React from 'react';
 
 const StatusBars = ({ stress, money }) => {
   return (
-    <div className="status-bars">
-      <div className="bar-container">
-        <p>Stress: {stress}</p>
-        <div id="stress-bar" style={{ height: `${(stress / 100) * 100}%` }}></div>
-      </div>
-      <div className="bar-container">
-        <p>Money: ${money}</p>
-        <div id="money-bar" style={{ height: `${(money / 1000) * 100}%` }}></div>
-      </div>
+    <div id="stats">
+      <div id="stress-bar" className="bar" style={{ height: `${(stress / 100) * 100}%` }}></div>
+      <div id="money-bar" className="bar" style={{ height: `${(money / 1000) * 100}%` }}></div>
     </div>
   );
 };

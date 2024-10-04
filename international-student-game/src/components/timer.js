@@ -18,8 +18,19 @@ const Timer = ({ active, question, onTimeout }) => {
   }, [time, active]);
 
   return (
-    <div className="timer">
-      <p>Time remaining: {time}</p>
+    <div id="timer-container">
+      <svg width="100" height="100">
+        <circle className="base-ring" cx="50" cy="50" r="45" />
+        <circle
+          className="progress-ring"
+          cx="50"
+          cy="50"
+          r="45"
+          strokeDasharray="283"
+          strokeDashoffset={(time / 10) * 283}
+        />
+      </svg>
+      <div id="timer-count">{time}</div>
     </div>
   );
 };
