@@ -171,50 +171,7 @@ function updateStats(newStress, newMoney) {
   updateBars(newStress, newMoney);
 }
 
-// // Function to set the timer progress
-// function setProgress(percent) {
-//   const offset =(percent / 100) * circumference ;
-//   progressRing.style.strokeDashoffset = offset;
-// }
 
-// // Function to start the countdown timer after question is displayed
-// function startTimer(question) {
-//   document.getElementById("timer-container").style.display = "block";
-//   remainingTime = timerDuration;
-//   const timerDisplay = document.getElementById("timer-count");
-//   timerDisplay.textContent = remainingTime;
-
-//   let timeElapsed = 0;
-
-//   timerInterval = setInterval(() => {
-//     timeElapsed++;
-//     remainingTime--;
-//     timerDisplay.textContent = remainingTime;
-//     console.log(timeElapsed,remainingTime,timerDuration)
-    
-//     const percentage = (timeElapsed / (timerDuration)) * 100;
-//     console.log(percentage)
-//     setProgress(percentage);
-
-//     if (remainingTime <= 0) {
-//       clearInterval(timerInterval); // Stop the timer when it reaches 0
-//       handleTimeout(question); // Handle timeout
-//     }
-//   }, 1000); // Update every second
-// }
-
-// Handle timeout when the timer runs out
-// function handleTimeout(question) {
-//   console.log("Timer ran out!");
-//   document.getElementById("timer-container").style.display = "none";
-
-//   // Use the timeout action defined in the question (if available)
-//   const timeoutAction = question.timeout;
-
-//   if (timeoutAction) {
-//     handleAnswer(timeoutAction);
-//   }
-// }
 
 // Game Over function
 function gameOver() {
@@ -223,7 +180,7 @@ function gameOver() {
   document.getElementById("prologue-container").style.display = "none"; // Hide prologue
   document.getElementById("game-over").style.display = "block"; // Show Game Over screen
   document.getElementById("game-over-text").textContent = 
-    (stress >= maxStress) ? "Game Over: Too Much Stress!" : "Game Over: You Ran Out of Money!";
+    (stress >= maxStress) ? "Game Over: Your could not handle mental pressure !" : "Game Over: You Ran Out of Money !";
 }
 
 // Restart or reset the game (optional)
