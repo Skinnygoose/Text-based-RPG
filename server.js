@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const User = require('./models/User'); // Import the User model
+const User = require('./user'); // Import the User model
 
 const app = express();
 

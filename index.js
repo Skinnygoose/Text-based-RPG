@@ -15,12 +15,12 @@ let remainingTime = timerDuration;
 const maxStress = 100;
 const minMoney = 0;
 
-// Set circle radius and circumference for the timer
-const radius = 45;
-const circumference = 2 * Math.PI * radius;
-const progressRing = document.getElementById('progress-ring');
-progressRing.style.strokeDasharray = circumference;
-progressRing.style.strokeDashoffset = 0;
+// // Set circle radius and circumference for the timer
+// const radius = 45;
+// const circumference = 2 * Math.PI * radius;
+// const progressRing = document.getElementById('progress-ring');
+// progressRing.style.strokeDasharray = circumference;
+// progressRing.style.strokeDashoffset = 0;
 
 // Start the journey
 document.getElementById("startJourney").addEventListener("click", function() {
@@ -75,7 +75,7 @@ function startPrologue() {
 // End the chapter and display the prologue
 function endChapter(endPrologueKey) {
   document.getElementById("question-container").style.display = "none"; // Hide questions
-  const endPrologueText = currentChapter[endPrologueKey];
+  const endPrologueText = currentChapter[endPrologueKey]; // Dynamically pick the correct endPrologue
   displayPrologueLines(endPrologueText, () => {
     document.getElementById("nextChapter").style.display = "block"; // Show next chapter button
   });
@@ -86,11 +86,13 @@ function loadNextChapter() {
   currentChapterIndex++;
   loadChapter(currentChapterIndex);
   if (currentChapterIndex < chapters.length) {
+    loadChapter(currentChapterIndex);
     document.getElementById("prologue-container").style.display = "none"; // Hide prologue container
     document.getElementById("nextChapter").style.display = "none"; // Hide next chapter button
     startPrologue(); // Start the next chapter's prologue
   } else {
     console.log("No more chapters available.");
+    gameOver(); // If no more chapters, trigger game over or completion screen
   }
 }
 
@@ -124,7 +126,7 @@ function displayQuestion(question) {
 });
 
   // Start the timer after the question and answers are fully displayed
-  startTimer(question);
+ // startTimer(question);
 }
 
 function shuffleArray(array) {
@@ -174,50 +176,50 @@ function updateStats(newStress, newMoney) {
   updateBars(newStress, newMoney);
 }
 
-// Function to set the timer progress
-function setProgress(percent) {
-  const offset =(percent / 100) * circumference ;
-  progressRing.style.strokeDashoffset = offset;
-}
+// // Function to set the timer progress
+// function setProgress(percent) {
+//   const offset =(percent / 100) * circumference ;
+//   progressRing.style.strokeDashoffset = offset;
+// }
 
-// Function to start the countdown timer after question is displayed
-function startTimer(question) {
-  document.getElementById("timer-container").style.display = "block";
-  remainingTime = timerDuration;
-  const timerDisplay = document.getElementById("timer-count");
-  timerDisplay.textContent = remainingTime;
+// // Function to start the countdown timer after question is displayed
+// function startTimer(question) {
+//   document.getElementById("timer-container").style.display = "block";
+//   remainingTime = timerDuration;
+//   const timerDisplay = document.getElementById("timer-count");
+//   timerDisplay.textContent = remainingTime;
 
-  let timeElapsed = 0;
+//   let timeElapsed = 0;
 
-  timerInterval = setInterval(() => {
-    timeElapsed++;
-    remainingTime--;
-    timerDisplay.textContent = remainingTime;
-    console.log(timeElapsed,remainingTime,timerDuration)
+//   timerInterval = setInterval(() => {
+//     timeElapsed++;
+//     remainingTime--;
+//     timerDisplay.textContent = remainingTime;
+//     console.log(timeElapsed,remainingTime,timerDuration)
     
-    const percentage = (timeElapsed / (timerDuration)) * 100;
-    console.log(percentage)
-    setProgress(percentage);
+//     const percentage = (timeElapsed / (timerDuration)) * 100;
+//     console.log(percentage)
+//     setProgress(percentage);
 
-    if (remainingTime <= 0) {
-      clearInterval(timerInterval); // Stop the timer when it reaches 0
-      handleTimeout(question); // Handle timeout
-    }
-  }, 1000); // Update every second
-}
+//     if (remainingTime <= 0) {
+//       clearInterval(timerInterval); // Stop the timer when it reaches 0
+//       handleTimeout(question); // Handle timeout
+//     }
+//   }, 1000); // Update every second
+// }
 
 // Handle timeout when the timer runs out
-function handleTimeout(question) {
-  console.log("Timer ran out!");
-  document.getElementById("timer-container").style.display = "none";
+// function handleTimeout(question) {
+//   console.log("Timer ran out!");
+//   document.getElementById("timer-container").style.display = "none";
 
-  // Use the timeout action defined in the question (if available)
-  const timeoutAction = question.timeout;
+//   // Use the timeout action defined in the question (if available)
+//   const timeoutAction = question.timeout;
 
-  if (timeoutAction) {
-    handleAnswer(timeoutAction);
-  }
-}
+//   if (timeoutAction) {
+//     handleAnswer(timeoutAction);
+//   }
+// }
 
 // Game Over function
 function gameOver() {
