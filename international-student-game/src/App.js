@@ -45,11 +45,11 @@
 
 import React, { useState, useEffect } from 'react';
 import Prologue from './components/Prologue';
-import Question from './components/Question';
-import GameOver from './components/GameOver';
-import StatusBars from './components/StatusBars';
-import Timer from './components/Timer';
-import { chapters } from './ques_ans'; // Your JSON data file
+import Question from './components/question';
+import GameOver from './components/gameOver';
+import StatusBars from './components/statusbar';
+import Timer from './components/timer';
+import { chapters } from './components/json-data'; // Your JSON data file
 
 const App = () => {
   const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
