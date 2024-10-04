@@ -15,12 +15,7 @@ let remainingTime = timerDuration;
 const maxStress = 100;
 const minMoney = 0;
 
-// // Set circle radius and circumference for the timer
-// const radius = 45;
-// const circumference = 2 * Math.PI * radius;
-// const progressRing = document.getElementById('progress-ring');
-// progressRing.style.strokeDasharray = circumference;
-// progressRing.style.strokeDashoffset = 0;
+
 
 // Start the journey
 document.getElementById("startJourney").addEventListener("click", function() {
