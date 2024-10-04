@@ -43,7 +43,9 @@
 
 // export default App;
 
+
 import React, { useState, useEffect } from 'react';
+import './App.css'; // This will apply the styles globally across your app
 import Prologue from './components/Prologue';
 import Question from './components/question';
 import GameOver from './components/gameOver';
@@ -99,17 +101,27 @@ const App = () => {
   };
 
   return (
-    <div className="game">
-      <StatusBars stress={stress} money={money} />
+    <div id="particles-js">
       {gameOver ? (
-        <GameOver onRestart={handleRestart} />
-      ) : currentQuestion ? (
-        <>
-          <Timer active={timerActive} question={currentQuestion} onTimeout={handleAnswer} />
-          <Question question={currentQuestion} onAnswer={handleAnswer} />
-        </>
+        <div id="game-over" className="fade-in">
+          <div id="game-over-content">
+            <h1>Game Over</h1>
+            <p id="game-over-text">You ran out of money!</p>
+            <button id="restartButton" onClick={restartGame}>Restart</button>
+          </div>
+        </div>
       ) : (
-        <Prologue chapter={chapters[currentChapterIndex]} onStart={() => setCurrentQuestionIndex(0)} />
+        <>
+          <StatusBars stress={stress} money={money} />
+          {currentQuestion ? (
+            <>
+              <Timer active={timer > 0} question={currentQuestion} onTimeout={handleAnswer} />
+              <Question question={currentQuestion} onAnswer={handleAnswer} />
+            </>
+          ) : (
+            <Prologue chapter={chapters[currentChapterIndex]} onStart={() => setCurrentQuestionIndex(0)} />
+          )}
+        </>
       )}
     </div>
   );
