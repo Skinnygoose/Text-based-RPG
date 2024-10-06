@@ -417,29 +417,37 @@ var chapters = [
         question:
           "You have moved in to your new place and now you four days remaining before your orientation on top of that you have pressure to find a part time job ",
         answers: [
-          { text: "you wait until orientation since you are excited about college ", 
-            next: "-----", 
-            stress: 0, 
-            money: 0, 
-            correct: true },
           {
-            text: "you start looking immediately since you have limited money and need cash for next month rent ",
-            next: "---",
+            text: "you wait until orientation since you are excited about college ",
+            next: "C8",
             stress: 0,
             money: 0,
             correct: true,
           },
-         
+          {
+            text: "you start looking immediately since you have limited money and need cash for next month rent ",
+            next: "C2",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
         ],
       },
       {
         id: "C2",
-        question: "you start looking for job you have asked your friends or roommates for advice and two possinle ways lie ahead of you",
+        question:
+          "you start looking for job you have asked your friends or roommates for advice and two possinle ways lie ahead of you",
         answers: [
-          { text: "Apply online ", next: "---", stress: 0, money: 0, correct: true },
+          {
+            text: "Apply online ",
+            next: "C3",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
           {
             text: "Go out and apply in person",
-            next: "-----",
+            next: "C5",
             stress: 0,
             money: 0,
             correct: false,
@@ -447,25 +455,329 @@ var chapters = [
         ],
       },
       {
-        id: "q3",
-        question: "This is the final question for chapter 1.",
+        id: "C3",
+        question:
+          "you apply online but response time is long and you might end up waiting for a month.",
         answers: [
           {
-            text: "Option 1",
-            next: "endPrologue1",
+            text: "Next",
+            next: "C4",
+            stress: 10,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "C4",
+        question:
+          "you did not get response  and convocation date arrived, you decided to go to attend convocation ",
+        answers: [
+          {
+            text: "Next",
+            next: "C8",
+            stress: 10,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "C5",
+        question:
+          "you apply by going to a lot of places and after 3 days you get a interview call from 2 places and got selected both jobs ",
+        answers: [
+          {
+            text: "good pay good hours but start immediately",
+            next: "C6",
+            stress: 20,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "pay is not decent but can start after convocation",
+            next: "C7",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "C6",
+        question:
+          "made first sacrifice skip orientation and you feel sad about that but you have a decent paying job which lifts up the pressure of money and you feel secure financially .",
+        answers: [
+          {
+            text: "Next",
+            next: "C11",
+            stress: 20,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "C7",
+        question:
+          "you go for less demanded job , less money less social activity , more time to study.",
+        answers: [
+          {
+            text: "Next",
+            next: "C12",
+            stress: -20,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "C8",
+        question:
+          "you meet new friends had a good first day but problem of job still remains time is short before next month .",
+        answers: [
+          {
+            text: "Apply online",
+            next: "C19",
             stress: -5,
             money: 0,
             correct: true,
           },
           {
-            text: "Option 2",
-            next: "q_wrong_3",
-            stress: 8,
-            money: -50,
-            correct: false,
+            text: "Go out apply in person",
+            next: "C9",
+            stress: 10,
+            money: 0,
+            correct: true,
           },
         ],
       },
+      {
+        id: "C9",
+        question: "you decided to go apply in person and found 2 job offers",
+        answers: [
+          {
+            text: "Apply online",
+            next: "C11",
+            stress: -5,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "Go out apply in person",
+            next: "C7",
+            stress: 10,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "C19",
+        question: "you decided to go apply online and found 2 job offers",
+        answers: [
+          {
+            text: "Good pay but more hours  to demanded by work",
+            next: "C11",
+            stress: -5,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "min pay but less demanded job",
+            next: "C12",
+            stress: 10,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+     
+      {
+        id: "C11",
+        question:
+          "you opt for high demanding job and now your job schedule is not exactly what you wanted ",
+        answers: [
+          {
+            text: "work weekends plus compromise 1 class on weekday",
+            next: "C12",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "work all weekdays and skip 3 classes",
+            next: "C13",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "skip 2 classes and work one weekend",
+            next: "C14",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "C12",
+        question:
+          "you are performing just about average  in classes grades are above average and you are not worried about money  ",
+        answers: [
+          {
+            text: "Next",
+            next: "C16",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ]
+
+      },
+      {
+        id: "C13",
+        question:
+          "you are not performing good in classes  and if this keeps continue you might face serious academic consequence ",
+        answers: [
+          {
+            text: "Next",
+            next: "C20",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ]
+
+      },
+      {
+        id: "C20",
+        question:
+          "you failed in one course in first semester and you have to retake it which made you more anxious now and costed you money as well ",
+        answers: [
+          {
+            text: "Next",
+            next: "C16",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ]
+
+      },
+      {
+        id: "C14",
+        question:
+          "you are barely passing the courses but you are not concerned from money side and after the semester end you barely made it  ",
+        answers: [
+          {
+            text: "Next",
+            next: "C16",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ]
+
+      },
+      {
+        id: "C16",
+        question:
+          "Winters are here and its time to buy winter clothes and accessory and you are excited for your first snowfall   ",
+        answers: [
+          {
+            text: "Next",
+            next: "C15",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ]
+
+      },
+      {
+        id: "C15",
+        question:
+          "Since Winters are here , you have to buy winter clothes which will costs you quite a bit money but you do not have much of a choice ",
+        answers: [
+          {
+            text: "try to manage with layering up with your own clothes ",
+            next: "C17",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "Buy only jacket   ",
+            next: "C18",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "Buy both jacket and winter shoes  ",
+            next: "C26",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ]
+
+      },
+      {
+        id: "C17",
+        question:
+          "you tried to manage with existing clothes but winters are ruthless here and you fell ill and had to and skip ask for sick leave from job and school for a week  ",
+        answers: [
+          {
+            text: "endPrologue1",
+            next: "------",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        
+         
+        ]
+
+      },
+      {
+        id: "C18",
+        question:
+          "you went for one winter jacket and managed to survive your winters with some struggle as you were afraid of getting sick so you kept outdoor activity to minimum ",
+        answers: [
+          {
+            text: "Next ",
+            next: "endPrologue1",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        
+         
+        ]
+
+      },
+      {
+        id: "C26",
+        question:
+          "you bought both winter jacket as well as managed to survive your winters smoothly and enjoyed some winter activities too ",
+        answers: [
+          {
+            text: "Next ",
+            next: "endPrologue1",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        
+         
+        ]
+
+      },
+      
+      
     ],
     startPrologue: [
       "Its about time you embark on your next challenge ",
@@ -474,8 +786,9 @@ var chapters = [
       "choose carefully",
     ],
     endPrologue1: [
-      "Chapter 1 has concluded.",
-      "Get ready for the next challenge.",
+      "You have successfully passed the course and ready to apply for work permit",
+      "with a lot of hardship and challenges you have managed to finish your Journey",
+      "Congratulations you have completed your journey",
     ],
   },
 ];
