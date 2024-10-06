@@ -44,6 +44,12 @@ body {
   background-color:rgba(0, 0, 0, 0.0);
   width: 80%;
 }
+
+
+.bar {
+  transition: height 0.5s ease-in-out; /* Smooth height change over 0.5 seconds */
+}
+
 .container {
     width: 100%;
     text-align: center;
