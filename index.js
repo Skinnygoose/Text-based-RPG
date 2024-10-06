@@ -85,6 +85,10 @@ function loadNextChapter() {
     document.getElementById("prologue-container").style.display = "none"; // Hide prologue container
     document.getElementById("nextChapter").style.display = "none"; // Hide next chapter button
     startPrologue(); // Start the next chapter's prologue
+      // Reset stats for new chapter (if desired)
+      stress = 0; 
+      money = 1000; 
+      updateStats(stress, money);
   } else {
     console.log("No more chapters available.");
     gameOver(); // If no more chapters, trigger game over or completion screen

@@ -244,7 +244,6 @@ var chapters = [
       "Congratulations you have cleared your first challenge ",
       "You are full of excitement at uncertainity at the same time",
       "When you just thought that the challenge is over , now you face another major hurdle",
-      
     ],
   },
   {
@@ -259,14 +258,14 @@ var chapters = [
             text: "Go for Airbnb for a week and look for accommodation.",
             next: "q4",
             stress: 0,
-            money: -200,
+            money: -300,
             correct: false,
           },
           {
             text: "Ask your friends to let you crash with them for a week.",
             next: "q6",
-            stress: 0,
-            money: 0,
+            stress: 30,
+            money: -100,
             correct: true,
           },
           {
@@ -277,7 +276,7 @@ var chapters = [
             correct: false,
           },
         ],
-        timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
       },
       {
         id: "q_wrong_1",
@@ -297,10 +296,10 @@ var chapters = [
       {
         id: "q3",
         question:
-          "You moved into a shared room, helping you save money, but you're dealing with drama from other people. How do you feel?",
+          "You moved into a shared room, helping you save money, but you're dealing with drama which comes with sharing room with another person",
         answers: [
           {
-            text: "It's less money deducted, but my mental health is affected.",
+            text: "It's less expensive , but my your health is slightly affected.",
             next: "q4",
             stress: 5,
             money: -50,
@@ -312,13 +311,13 @@ var chapters = [
       {
         id: "q4",
         question:
-          "You chose to go for Airbnb. It is moderately expensive, but you have a good experience since it is in the city. What would you like to do?",
+          "You chose to go for Airbnb. It is moderately expensive, but you have a good experience since it is in the city. After looking for few days you found some options ahead",
         answers: [
           {
             text: "Go for a private room, but it's expensive.",
             next: "q2",
             stress: 0,
-            money: -300,
+            money: -400,
             correct: false,
           },
           {
@@ -329,9 +328,9 @@ var chapters = [
             correct: false,
           },
           {
-            text: "Go for a shared room with another person, which is cost-effective but more stressful.",
+            text: "Go for a shared room with another person, which is cost-effective but it has its own challenges.",
             next: "q3",
-            stress: -5,
+            stress: -10,
             money: -100,
             correct: true,
           },
@@ -373,7 +372,7 @@ var chapters = [
             correct: false,
           },
           {
-            text: "Go for a shared room with another person, which is cost-effective but more stressful.",
+            text: "Go for a shared room with another person, which is and it comes with its own challenges.",
             next: "endPrologue",
             stress: -5,
             money: -100,
@@ -385,10 +384,10 @@ var chapters = [
       {
         id: "q7",
         question:
-          "You chose to go for a private room. It will cost you more monthly, but you will have peace and time to yourself. How do you feel?",
+          "You chose to go for a private room. It will cost you more monthly, but you will have peace and time to yourself.",
         answers: [
           {
-            text: "Mental health stable, but more money deducted.",
+            text: "You feel at peace, but your need to spend more now ",
             next: "endPrologue",
             stress: -5,
             money: -300,
@@ -401,12 +400,82 @@ var chapters = [
     startPrologue: [
       "You have arrived at toronto city of opportunities .",
       "As any other person you need to find a roof over your head ",
+      "You face plethora of options as you start looking but not every path can be taked in your shoes ",
       "City is full of surprises be carefull.",
     ],
     endPrologue: [
-      "You've navigated your options successfully.",
-      "Challenges lie ahead, but you're making progress.",
-      "Prepare for the next decisions that await.",
+      "Congratulations you have finally achieved a major achievement",
+      "You secured a place to live on your own and now you look forward with high hopes",
+      "There are more exciting experiences you fill face good luck",
+    ],
+  },
+  {
+    id: "chapter3",
+    questions: [
+      {
+        id: "C1",
+        question:
+          "You have moved in to your new place and now you four days remaining before your orientation on top of that you have pressure to find a part time job ",
+        answers: [
+          { text: "you wait until orientation since you are excited about college ", 
+            next: "-----", 
+            stress: 0, 
+            money: 0, 
+            correct: true },
+          {
+            text: "you start looking immediately since you have limited money and need cash for next month rent ",
+            next: "---",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+         
+        ],
+      },
+      {
+        id: "C2",
+        question: "you start looking for job you have asked your friends or roommates for advice and two possinle ways lie ahead of you",
+        answers: [
+          { text: "Apply online ", next: "---", stress: 0, money: 0, correct: true },
+          {
+            text: "Go out and apply in person",
+            next: "-----",
+            stress: 0,
+            money: 0,
+            correct: false,
+          },
+        ],
+      },
+      {
+        id: "q3",
+        question: "This is the final question for chapter 1.",
+        answers: [
+          {
+            text: "Option 1",
+            next: "endPrologue1",
+            stress: -5,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "Option 2",
+            next: "q_wrong_3",
+            stress: 8,
+            money: -50,
+            correct: false,
+          },
+        ],
+      },
+    ],
+    startPrologue: [
+      "Its about time you embark on your next challenge ",
+      "You have orientation day coming up but",
+      "As excited you are you are to face another hard decision probably the hardest uptill now",
+      "choose carefully",
+    ],
+    endPrologue1: [
+      "Chapter 1 has concluded.",
+      "Get ready for the next challenge.",
     ],
   },
 ];
