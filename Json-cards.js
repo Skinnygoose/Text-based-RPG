@@ -122,7 +122,7 @@ var chapters = [
             correct: false,
           },
         ],
-        timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
       },
       {
         id: "q_wrong_3",
@@ -165,7 +165,7 @@ var chapters = [
             correct: false,
           },
         ],
-        timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
       },
       {
         id: "q_wrong_1",
@@ -208,7 +208,7 @@ var chapters = [
             correct: false,
           },
         ],
-        timeout: { next: "q_wrong_1", stress: 50, money: -50 }, // <-- Add this
+        // timeout: { next: "q_wrong_1", stress: 50, money: -50 }, // <-- Add this
       },
       {
         id: "q_wrong_2",
@@ -379,7 +379,7 @@ var chapters = [
             correct: true,
           },
         ],
-        timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
       },
       {
         id: "q7",
@@ -592,7 +592,7 @@ var chapters = [
           },
         ],
       },
-     
+
       {
         id: "C11",
         question:
@@ -633,8 +633,7 @@ var chapters = [
             money: 0,
             correct: true,
           },
-        ]
-
+        ],
       },
       {
         id: "C13",
@@ -648,8 +647,7 @@ var chapters = [
             money: 0,
             correct: true,
           },
-        ]
-
+        ],
       },
       {
         id: "C20",
@@ -663,8 +661,7 @@ var chapters = [
             money: 0,
             correct: true,
           },
-        ]
-
+        ],
       },
       {
         id: "C14",
@@ -678,8 +675,7 @@ var chapters = [
             money: 50,
             correct: true,
           },
-        ]
-
+        ],
       },
       {
         id: "C16",
@@ -693,8 +689,7 @@ var chapters = [
             money: 0,
             correct: true,
           },
-        ]
-
+        ],
       },
       {
         id: "C15",
@@ -722,8 +717,7 @@ var chapters = [
             money: -500,
             correct: true,
           },
-        ]
-
+        ],
       },
       {
         id: "C17",
@@ -737,10 +731,7 @@ var chapters = [
             money: 0,
             correct: true,
           },
-        
-         
-        ]
-
+        ],
       },
       {
         id: "C18",
@@ -754,10 +745,7 @@ var chapters = [
             money: 0,
             correct: true,
           },
-        
-         
-        ]
-
+        ],
       },
       {
         id: "C26",
@@ -766,18 +754,13 @@ var chapters = [
         answers: [
           {
             text: "Next ",
-            next: "endPrologue1",
+            next: "endPrologue",
             stress: 0,
             money: 0,
             correct: true,
           },
-        
-         
-        ]
-
+        ],
       },
-      
-      
     ],
     startPrologue: [
       "Its about time you embark on your next challenge ",
@@ -785,10 +768,397 @@ var chapters = [
       "As excited you are you are to face another hard decision probably the hardest uptill now",
       "choose carefully",
     ],
-    endPrologue1: [
-      "You have successfully passed the course and ready to apply for work permit",
-      "with a lot of hardship and challenges you have managed to finish your Journey",
-      "Congratulations you have completed your journey",
+    endPrologue: [
+      "Congratulations you have survived winters , and almost near graduation , your winter break of two weeks come up , it will come with few surprises , enjoy you time ahead good luck!",
+    ],
+  },
+  {
+    id: "chapter4", // Replace with the chapter number or name
+    questions: [
+      {
+        id: "D1", // Question ID
+        question:
+          "winters have passed and now you are in early summers , you also have made quite a few friends and as expected fun activities are around the corner , your classmates  are going out and you were invited as well ", // Question text
+        answers: [
+          {
+            text: "Next", // Option text
+            next: "D2", // ID of the next question or endPrologue
+            stress: 0, // Stress change from selecting this option
+            money: 0, // Money change from selecting this option
+            correct: true, // Mark if this is the correct option
+          },
+        ],
+      
+      },
+      {
+        id: "D2",
+        question:
+          "You are ordering food along with your friends and you check out the menu unfortunately you noticed that their meat dishes are not halal but since you are not bound by previous social limitations you have liberty to go other way around ",
+        answers: [
+          {
+            text: "order chicken meal",
+            next: "D3", // End of the chapter
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "order a beef platter",
+            next: "D3", // Optional: Another wrong answer branch
+            stress: 0,
+            money: 0,
+            correct: false,
+          },
+          {
+            text: "order a vegan course ",
+            next: "D4", // Optional: Another wrong answer branch
+            stress: 0,
+            money: 0,
+            correct: false,
+          },
+        ],
+        // timeout: {
+        //   next: "q_wrong_2", // Optional: Handle timeout
+        //   stress: 10,
+        //   money: -50,
+        // },
+      },
+      {
+        id: "D3",
+        question:
+          "You thought about going for it but ultimately you refrained from it since you were ",
+        answers: [
+          {
+            text: "Next",
+            next: "D5", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D4",
+        question:
+          "you pretended to be vegan and your friends teased you made  a little fun of you but you just played along and laughed it off",
+        answers: [
+          {
+            text: "Next",
+            next: "D5", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D5",
+        question:
+          "While having dinner one of your friend revealed its his birthday so  called out a waiter and he ordered beers for everyone from his side and you are being offered one too",
+        answers: [
+          {
+            text: "accept the beer and drink to socialize",
+            next: "D6", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "decline politely",
+            next: "D7", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D6",
+        question:
+          "To not offend your newly made friends you could not decline and gave in too peer pressure and drank beer for the first time and now you feel super guilty",
+        answers: [
+          {
+            text: "accept the beer and drink to socialize",
+            next: "D10", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D7",
+        question:
+          "you tried to decline peacefully but situation became a bit weird since you are only person not drinking that, what would you like to do ",
+        answers: [
+          {
+            text: "explain to your friends your actual reason ",
+            next: "D8", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "tell them you have medical condition (lie) ",
+            next: "D9", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D8",
+        question:
+          "your friends respected your decision and one of your friends got it exchanged from a non alcoholic drink but you felt a slightly change in some of your friends attitude and looks like you felt somewhat left out  ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D10", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D9",
+        question:
+          "your friend who ordered apologized and got it exchanged but you felt guilty for lying since now you will have to rely on it and going back on your word might make you look like a liar   ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D10", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D10",
+        question:
+          "you had a good time overall and went back to home after that   ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D11", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D11",
+        question:
+          "Few weeks passed and you are scrolling through your phone and you realized Eid is coming soon you are somewhat excited as well you feel isolated and homesick  ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D12", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D12",
+        question:
+          "You have to plan ahead , what you want to do you have mixed feelings ,as much as you want to celebrate being alone comes with its challenges   ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D13", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D13",
+        question:
+          "Eid is coming up tomorrow , you have class on same morning as well your work in the evening  ",
+        answers: [
+          {
+            text: "take off from work on that day ",
+            next: "D14", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "Go to work on that day  ",
+            next: "D20", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D14",
+        question:
+          "You took off from work as you want have feeling of celebration , you attended class but you feel out of place since no one share your joy and feelings  ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D15", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D15",
+        question:
+          "To handle the loneliness you thought about several options to cope up  ",
+        answers: [
+          {
+            text: "call home and talk to family  ",
+            next: "D18", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "Go to nearest mosque and try to meet up within your community ",
+            next: "D16", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D16",
+        question:
+          "You went to nearest mosque and found a sense of belonging since everyone around you was hugging and greeting but more or less they are mostly strangers and you turned out to miss your family relatives more  ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D19", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D18",
+        question:
+          "You FaceTime your family and that helped you somewhat felt like at home and reduce the feeling of loneliness , but as soon the call was you still felt somewhat empty, but hey its better than nothing ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D19", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D19",
+        question:
+          "although the day was passed as usual you still wanted to fulfill the feeling ,so you after work you went to downtown to but yourself something as a token of celebration  ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D21", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D20",
+        question:
+          "You thought of keeping yourself busy and decide to go to work , and your day passed as usual ,business kept you away form negative thoughts and day passed as usual ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D19", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D21",
+        question: "You arrived at downtown market ",
+        answers: [
+          {
+            text: "treat yourself with nice dinner  ",
+            next: "D23", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "but yourself nice shoes   ",
+            next: "D22", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D22",
+        question:
+          "You bought yourself a nice gift and it gave you a superficial happiness and you celebrated in your own way ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D23", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D23",
+        question:
+          "YYou bought yourself a nice dinner , but even the fancy food do not give you much joy when you are alone nevertheless you had celebrated in your own way ",
+        answers: [
+          {
+            text: "Next ",
+            next: "D24", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+      {
+        id: "D24",
+        question:
+          "Semester break was a roller coaster of emotions for you , had its ups and downs and not long after that your results came and you passed the course although not quite excellent result but for you its no less joyful as anyone because in the end we all face our battles alone and yours has been quite hard but you persisted  ",
+        answers: [
+          {
+            text: "Next ",
+            next: "endPrologue", // Return to correct path
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+        ],
+      },
+    ],
+    startPrologue: [
+      "Semester break finally came and you its time for you to live a little , life is unpredictable let us see what it has for you this time  ",
+    ],
+    endPrologue: [
+      "You have come to the end of your journey as a student , you survived and stayed strong and that gave you something someone cannot obtain but through hardships and struggles which is strength",
+      "Thank you for playing , as an international student and  developer of this game i would like to end this with one lesson i personally learnt through the my favourite quote",
+      "If at first you don’t succeed, just take a longer coffee break and try again",
     ],
   },
 ];
