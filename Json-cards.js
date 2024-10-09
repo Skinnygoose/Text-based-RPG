@@ -799,21 +799,21 @@ var chapters = [
             text: "order chicken meal",
             next: "D3", // End of the chapter
             stress: 0,
-            money: 0,
+            money: -50,
             correct: true,
           },
           {
             text: "order a beef platter",
             next: "D3", // Optional: Another wrong answer branch
             stress: 0,
-            money: 0,
+            money: -50,
             correct: false,
           },
           {
             text: "order a vegan course ",
             next: "D4", // Optional: Another wrong answer branch
             stress: 0,
-            money: 0,
+            money: -50,
             correct: false,
           },
         ],
@@ -832,7 +832,7 @@ var chapters = [
             text: "Next",
             next: "D5", // Return to correct path
             stress: 0,
-            money: 0,
+            money: 20,
             correct: true,
           },
         ],
@@ -845,7 +845,7 @@ var chapters = [
           {
             text: "Next",
             next: "D5", // Return to correct path
-            stress: 0,
+            stress: 10,
             money: 0,
             correct: true,
           },
@@ -859,14 +859,14 @@ var chapters = [
           {
             text: "accept the beer and drink to socialize",
             next: "D6", // Return to correct path
-            stress: 0,
+            stress: 20,
             money: 0,
             correct: true,
           },
           {
             text: "decline politely",
             next: "D7", // Return to correct path
-            stress: 0,
+            stress: 20,
             money: 0,
             correct: true,
           },
@@ -880,7 +880,7 @@ var chapters = [
           {
             text: "accept the beer and drink to socialize",
             next: "D10", // Return to correct path
-            stress: 0,
+            stress: 20,
             money: 0,
             correct: true,
           },
@@ -894,14 +894,14 @@ var chapters = [
           {
             text: "explain to your friends your actual reason ",
             next: "D8", // Return to correct path
-            stress: 0,
+            stress: -20,
             money: 0,
             correct: true,
           },
           {
             text: "tell them you have medical condition (lie) ",
             next: "D9", // Return to correct path
-            stress: 0,
+            stress: -20,
             money: 0,
             correct: true,
           },
@@ -915,7 +915,7 @@ var chapters = [
           {
             text: "Next ",
             next: "D10", // Return to correct path
-            stress: 0,
+            stress: 10,
             money: 0,
             correct: true,
           },
@@ -986,14 +986,14 @@ var chapters = [
             text: "take off from work on that day ",
             next: "D14", // Return to correct path
             stress: 0,
-            money: 0,
+            money: -100,
             correct: true,
           },
           {
             text: "Go to work on that day  ",
             next: "D20", // Return to correct path
             stress: 0,
-            money: 0,
+            money: 200,
             correct: true,
           },
         ],
@@ -1020,7 +1020,7 @@ var chapters = [
           {
             text: "call home and talk to family  ",
             next: "D18", // Return to correct path
-            stress: 0,
+            stress: -10,
             money: 0,
             correct: true,
           },
@@ -1028,7 +1028,7 @@ var chapters = [
             text: "Go to nearest mosque and try to meet up within your community ",
             next: "D16", // Return to correct path
             stress: 0,
-            money: 0,
+            money: -50,
             correct: true,
           },
         ],
@@ -1041,7 +1041,7 @@ var chapters = [
           {
             text: "Next ",
             next: "D19", // Return to correct path
-            stress: 0,
+            stress: 20,
             money: 0,
             correct: true,
           },
@@ -1055,7 +1055,7 @@ var chapters = [
           {
             text: "Next ",
             next: "D19", // Return to correct path
-            stress: 0,
+            stress: -5,
             money: 0,
             correct: true,
           },
@@ -1083,7 +1083,7 @@ var chapters = [
           {
             text: "Next ",
             next: "D19", // Return to correct path
-            stress: 0,
+            stress: 10,
             money: 0,
             correct: true,
           },
@@ -1096,15 +1096,15 @@ var chapters = [
           {
             text: "treat yourself with nice dinner  ",
             next: "D23", // Return to correct path
-            stress: 0,
-            money: 0,
+            stress: -20,
+            money: -100,
             correct: true,
           },
           {
             text: "but yourself nice shoes   ",
             next: "D22", // Return to correct path
-            stress: 0,
-            money: 0,
+            stress: -20,
+            money: -150,
             correct: true,
           },
         ],

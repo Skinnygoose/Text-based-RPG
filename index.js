@@ -87,7 +87,7 @@ function loadNextChapter() {
     startPrologue(); // Start the next chapter's prologue
       // Reset stats for new chapter (if desired)
       stress = 0; 
-      money = 1000; 
+      money = 200; 
       updateStats(stress, money);
   } else {
     console.log("No more chapters available.");
