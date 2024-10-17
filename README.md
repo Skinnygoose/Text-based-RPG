@@ -1,86 +1,99 @@
-No worries! Here’s a more detailed README file content for your project:
 
----
+# Text-Based RPG Game
 
-# **International Student Accommodation Decision Game**
+Welcome to the **Text-Based RPG Game**, a dynamic, narrative-driven game that allows players to experience the challenges and decisions faced by international students in Canada. This text-based adventure game is built using HTML, CSS, and JavaScript. It features various chapters, choices, and a stress-money management system that reflects the player's journey through the game.
 
-This repository contains a decision-based web game where players step into the shoes of an international student arriving in a foreign city. The player navigates real-world challenges, making decisions that impact their mental health and finances as they seek accommodation and balance their life.
-
-## **Table of Contents**
+## Table of Contents
+- [Demo](#demo)
 - [Features](#features)
-- [Game Mechanics](#game-mechanics)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Gameplay](#gameplay)
+- [File Structure](#file-structure)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
 
-## **Features**
-- **Interactive Decision-Making**: Players are presented with various accommodation options and other life decisions that impact their finances and mental health.
-- **Dynamic Story Flow**: Based on the player's choices, the storyline progresses, with different branches for various outcomes.
-- **Mental Stress and Money Bars**: Visual indicators show how each decision affects the player's well-being and finances.
-- **Timer for Anxiety**: Players must make decisions under time pressure, and wrong or delayed choices result in additional stress and complex scenarios.
-- **Branching Scenarios**: Each decision (e.g., staying in an Airbnb, with friends, or booking a hotel) has its own consequences, such as financial strain, mental health effects, or potential government penalties for working illegally.
+## Demo
+You can try out the live version of the game here: [Demo Link](#)
 
-## **Game Mechanics**
-1. **Accommodation Choices**: Players begin the game by choosing how to secure temporary housing (e.g., Airbnb, staying with friends, hotel), and each choice influences future scenarios.
-2. **Consequences of Decisions**:
-   - **Expensive Accommodation**: Leads to high financial strain, forcing the player to work extra hours, which could impact their mental health or lead to legal consequences.
-   - **Moderate Accommodation**: A balanced option that requires fewer working hours but might cause moderate stress.
-   - **Low-Cost Accommodation**: Allows more time for studies but comes with poor living conditions, affecting mental health.
-3. **Timer System**: When the player is asked to make a decision, a timer begins. If the timer runs out, the number of options increases, representing real-life anxiety.
+![Game Preview](#)
 
-## **Installation**
-1. Clone the repository:
+## Features
+- **Narrative-Driven Gameplay**: Players make choices that influence the story's outcome.
+- **Stress and Money Management**: Players must maintain a balance between stress and money, or the game ends.
+- **Multiple Chapters**: Experience different chapters, each with unique challenges.
+- **Dynamic Bars**: Real-time updates of stress and money bars as decisions are made.
+- **Customizable Story**: Easily extendable story content with a JSON-based chapter system.
+  
+## Installation
+
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/international-student-game.git
+   git clone https://github.com/your-username/text-based-rpg.git
    ```
-2. Install dependencies for both the client (React) and server (Node.js):
+
+2. **Navigate to the project directory**:
    ```bash
-   cd international-student-game
-   npm install
-   cd client
-   npm install
+   cd text-based-rpg
    ```
 
-3. Set up a `.env` file in the root directory for your MongoDB connection string and any necessary environment variables:
-   ```
-   MONGO_URI=mongodb://localhost:27017/student-game
-   PORT=5000
-   ```
+3. **Install dependencies** (if applicable):
+   Since this is a basic web game, no external dependencies are required at this stage. Simply run the game on a local server.
 
-4. Run the development server:
-   ```bash
-   cd ..
-   npm run dev
-   ```
+4. **Run the game**:
+   - If using Visual Studio Code, use the **Live Server** extension to run the game.
+   - Alternatively, open `index.html` directly in your browser.
 
-5. Open your browser at `http://localhost:3000` to view the game.
+## Gameplay
 
-## **Usage**
-- The game starts with the player arriving in a new city.
-- They are given multiple-choice options to select their temporary accommodation.
-- Each choice leads to consequences, either reducing or increasing mental stress and financial health, with further choices to be made based on previous decisions.
+In this game, players are presented with a series of decisions. Each choice affects two key metrics:
+- **Stress**: Represents the mental load on the player. If stress reaches 100, the game ends (displayed in red bar)
+- **Money**: Reflects the player's financial status. If money reaches 0, the game ends (displayed in green bar).
 
 
-## **Technologies Used**
-- **Frontend**: React.js, HTML, CSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB (for storing game data and player progress)
-- **State Management**: Redux (or Context API)
-- **Styling**: CSS
-- **Other Tools**: Mongoose (MongoDB ODM), Axios (for API requests)
+The player navigates through various chapters, each with its unique scenarios and questions. Some decisions are critical and may lead to unexpected outcomes.
 
-## **Contributing**
-Contributions are welcome! To contribute:
-1. Fork this repository.
-2. Create a feature branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a pull request.
+### How to Play:
+1. Start the game by clicking the **"Start Your Journey"** button.
+2. Make decisions by selecting one of the available options for each scenario.
+3. Monitor your **stress** and **money** bars, as they will change based on your choices.
+4. Progress through the story by completing each chapter and advancing to the next.
+5. Survive the challenges and make it to the end with a balanced life!
 
-## **License**
-This project is free source for everyone 
+## File Structure
 
----
+```bash
+.
+├── index.html          # Main game interface
+├── index.js            # Core game logic (functions, event listeners, etc.)
+├── Json-cards.js       # Story content (questions, answers, chapters) in JSON format
+├── index.css           # Styling for the game interface
+├── server.js           # Server logic (optional, if using a backend)
+├── user.js             # MongoDB-related functions for handling user data
+├── api.js              # API requests to fetch and register users
+├── README.md           # This README file
+```
+
+## Technologies Used
+- **HTML**: For structuring the game interface.
+- **CSS**: For styling the game elements.
+- **JavaScript**: For game logic and interactivity.
+- **MongoDB**: For storing user credentials.
+- **Node.js & Express.js**: For backend API handling (optional, if using user registration feature).
+
+## Contributing
+
+We welcome contributions! Please follow the steps below to contribute to the project:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes and push them to your fork.
+4. Submit a pull request, and we'll review your changes.
+
+Please make sure your code follows the project's coding conventions.
+
+## License
+This project is open source 
+
+
 
