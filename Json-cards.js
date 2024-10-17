@@ -177,7 +177,7 @@ var chapters = [
             next: "q2",
             stress: 50,
             money: 0,
-            correct: false,
+            correct: true,
           },
           {
             text: "I’m entering for school… wait, it’s a study visa, right?",
@@ -793,12 +793,12 @@ var chapters = [
       {
         id: "D2",
         question:
-          "You are ordering food along with your friends and you check out the menu unfortunately you noticed that their meat dishes are not halal but since you are not bound by previous social limitations you have liberty to go other way around ",
+          "You are ordering food along with your friends and you check out the menu unfortunately you noticed that their meat dishes are  halal but since you are not bound by previous social limitations you have liberty to go other way around ",
         answers: [
           {
             text: "order chicken meal",
             next: "D3", // End of the chapter
-            stress: 0,
+            stress: 30,
             money: -50,
             correct: true,
           },
