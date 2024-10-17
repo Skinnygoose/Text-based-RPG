@@ -259,7 +259,7 @@ var chapters = [
             next: "q4",
             stress: 0,
             money: -300,
-            correct: false,
+            correct: true,
           },
           {
             text: "Ask your friends to let you crash with them for a week.",
@@ -273,7 +273,7 @@ var chapters = [
             next: "q7",
             stress: 0,
             money: -500,
-            correct: false,
+            correct: true,
           },
         ],
         // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
@@ -303,7 +303,7 @@ var chapters = [
             next: "q4",
             stress: 5,
             money: -50,
-            correct: false,
+            correct: true,
           },
         ],
         timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
@@ -318,7 +318,7 @@ var chapters = [
             next: "q2",
             stress: 0,
             money: -400,
-            correct: false,
+            correct: true,
           },
           {
             text: "Go for a college dorm, which is out of your budget.",
@@ -347,7 +347,7 @@ var chapters = [
             next: "endPrologue",
             stress: 10,
             money: -100,
-            correct: false,
+            correct: true,
           },
         ],
         timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
@@ -362,14 +362,14 @@ var chapters = [
             next: "q7",
             stress: 0,
             money: -300,
-            correct: false,
+            correct: true,
           },
           {
             text: "Go for a college dorm, which is out of your budget.",
             next: "q_wrong_1",
             stress: 0,
             money: 0,
-            correct: false,
+            correct: true,
           },
           {
             text: "Go for a shared room with another person, which is and it comes with its own challenges.",
@@ -450,7 +450,7 @@ var chapters = [
             next: "C5",
             stress: 10,
             money: 0,
-            correct: false,
+            correct: true,
           },
         ],
       },
@@ -807,14 +807,14 @@ var chapters = [
             next: "D3", // Optional: Another wrong answer branch
             stress: 0,
             money: -50,
-            correct: false,
+            correct: true,
           },
           {
             text: "order a vegan course ",
             next: "D4", // Optional: Another wrong answer branch
             stress: 0,
             money: -50,
-            correct: false,
+            correct: true,
           },
         ],
         // timeout: {
