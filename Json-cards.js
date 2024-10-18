@@ -175,7 +175,7 @@ var chapters = [
           {
             text: "I’m studying in Toronto, at the university, but I’m not sure of the program details.",
             next: "q2",
-            stress: 50,
+            stress: 0,
             money: 0,
             correct: true,
           },
