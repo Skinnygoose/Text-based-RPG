@@ -58,7 +58,7 @@ function displayPrologueLines(prologue, callback) {
       clearInterval(prologueInterval);
       if (callback) callback(); // Call the callback function if provided
     }
-  }, 1000); // Adjust timing for line display
+  }, 5000); // Adjust timing for line display
 }
 
 // Start the chapter prologue
