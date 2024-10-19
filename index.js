@@ -58,7 +58,7 @@ function displayPrologueLines(prologue, callback) {
       clearInterval(prologueInterval);
       if (callback) callback(); // Call the callback function if provided
     }
-  }, 9000); // Adjust timing for line display
+  }, 3000); // Adjust timing for line display
 }
 
 // Start the chapter prologue
@@ -87,7 +87,7 @@ function loadNextChapter() {
     startPrologue(); // Start the next chapter's prologue
       // Reset stats for new chapter (if desired)
       stress = 0; 
-      money = 200; 
+      money = 500; 
       updateStats(stress, money);
   } else {
     console.log("No more chapters available.");

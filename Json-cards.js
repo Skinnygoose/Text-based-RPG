@@ -46,49 +46,49 @@ var chapters = [
           {
             text: "I’m not entirely sure, but I have some savings to rely on.",
             next: "q_wrong_2",
-            stress: 20,
+            stress: 50,
             money: 0,
             correct: false,
           },
           {
             text: "I may need to find work while I’m here to cover everything.",
             next: "q_wrong_2",
-            stress: 20,
+            stress: 50,
             money: 0,
             correct: false,
           },
           {
             text: "Yes, I think so. I have some savings and financial support.",
             next: "q3",
-            stress: 20,
+            stress: 50,
             money: 0,
             correct: false,
           },
           {
             text: "I’ll manage somehow, I might need to work part-time if needed.",
             next: "q_wrong_2",
-            stress: 20,
+            stress: 50,
             money: 0,
             correct: false,
           },
           {
             text: "I’m pretty sure I have enough, but things could change.",
             next: "q_wrong_2",
-            stress: 20,
+            stress: 50,
             money: 0,
             correct: false,
           },
           {
             text: "I have some funds for now, but I’m not sure if they’ll last the whole time.",
             next: "q_wrong_2",
-            stress: 20,
+            stress: 50,
             money: 0,
             correct: false,
           },
           {
             text: "I should have enough, but I’ll figure things out if money gets tight.",
             next: "q_wrong_2",
-            stress: 20,
+            stress: 50,
             money: 0,
             correct: false,
           },
@@ -110,14 +110,14 @@ var chapters = [
           {
             text: "I don’t have it on me right now, but I can get it from my email.",
             next: "q_wrong_3",
-            stress: 10,
+            stress: 50,
             money: 0,
             correct: false,
           },
           {
             text: "I’m not sure if I have it with me. Can I send it to you later?",
             next: "q_wrong_3",
-            stress: 10,
+            stress: 50,
             money: 0,
             correct: false,
           },
@@ -182,7 +182,7 @@ var chapters = [
           {
             text: "I’m entering for school… wait, it’s a study visa, right?",
             next: "q2",
-            stress: 5,
+            stress: 50,
             money: 0,
             correct: false,
           },
@@ -250,152 +250,234 @@ var chapters = [
     id: "chapter2",
     questions: [
       {
-        id: "q1",
+        id: "B1",
         question:
           "You have arrived in the city and need time to find accommodation. What would you do?",
         answers: [
           {
             text: "Go for Airbnb for a week and look for accommodation.",
-            next: "q4",
+            next: "B3",
             stress: 0,
-            money: -300,
+            money: -100,
             correct: true,
           },
           {
             text: "Ask your friends to let you crash with them for a week.",
-            next: "q6",
-            stress: 30,
-            money: -100,
+            next: "B2",
+            stress: 20,
+            money: 0,
             correct: true,
           },
           {
             text: "Book a hotel for a week.",
-            next: "q7",
+            next: "B6",
             stress: 0,
-            money: -500,
+            money: -300,
             correct: true,
           },
         ],
         // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
       },
       {
-        id: "q_wrong_1",
+        id: "B2",
         question:
-          "Unfortunately, you cannot go for the college dorm as you do not have the financial capacity. What will you do next?",
+          "you chose to go to your friends which is free but now you feel pressure to find somewhere else fast , but unfortunately your friends live little far from city so you will need to travel everyday and cost you money as well ",
         answers: [
           {
-            text: "Go back and choose the right decision.",
-            next: "q1",
+            text: "Next",
+            next: "B8",
             stress: 0,
             money: 0,
             correct: true,
           },
-        ],
-        timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
-      },
-      {
-        id: "q3",
-        question:
-          "You moved into a shared room, helping you save money, but you're dealing with drama which comes with sharing room with another person",
-        answers: [
-          {
-            text: "It's less expensive , but my your health is slightly affected.",
-            next: "q4",
-            stress: 5,
-            money: -50,
-            correct: true,
-          },
-        ],
-        timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
-      },
-      {
-        id: "q4",
-        question:
-          "You chose to go for Airbnb. It is moderately expensive, but you have a good experience since it is in the city. After looking for few days you found some options ahead",
-        answers: [
-          {
-            text: "Go for a private room, but it's expensive.",
-            next: "q2",
-            stress: 0,
-            money: -400,
-            correct: true,
-          },
-          {
-            text: "Go for a college dorm, which is out of your budget.",
-            next: "q_wrong_1",
-            stress: 0,
-            money: 0,
-            correct: false,
-          },
-          {
-            text: "Go for a shared room with another person, which is cost-effective but it has its own challenges.",
-            next: "q3",
-            stress: -10,
-            money: -100,
-            correct: true,
-          },
-        ],
-        timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
-      },
-      {
-        id: "q5",
-        question:
-          "You chose to stay with your friends, which is free, but now you feel pressured to find somewhere else fast. How does this affect you?",
-        answers: [
-          {
-            text: "Mental health affected as well as money deducted.",
-            next: "endPrologue",
-            stress: 10,
-            money: -100,
-            correct: true,
-          },
-        ],
-        timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
-      },
-      {
-        id: "q6",
-        question:
-          "You chose to stay at a hotel, which is very expensive, but you're hopeful of finding accommodation. After five days, what do you want to do?",
-        answers: [
-          {
-            text: "Go for a private room, but it's expensive.",
-            next: "q7",
-            stress: 0,
-            money: -300,
-            correct: true,
-          },
-          {
-            text: "Go for a college dorm, which is out of your budget.",
-            next: "q_wrong_1",
-            stress: 0,
-            money: 0,
-            correct: true,
-          },
-          {
-            text: "Go for a shared room with another person, which is and it comes with its own challenges.",
-            next: "endPrologue",
-            stress: -5,
-            money: -100,
-            correct: true,
-          },
+          
         ],
         // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
       },
       {
-        id: "q7",
+        id: "B3",
         question:
-          "You chose to go for a private room. It will cost you more monthly, but you will have peace and time to yourself.",
+          "you chose to go for airBNB it is moderately  expensive but you have good experience since it is in the city and you have time to look better accommodation and at the same time you can look for jobs too while making yourself familiar with the area , now you start looking for a room and you found various options what would you like to do ? ",
         answers: [
           {
-            text: "You feel at peace, but your need to spend more now ",
-            next: "endPrologue",
-            stress: -5,
+            text: "go for a private room but its expensive ",
+            next: "B5",
+            stress: 0,
             money: -300,
             correct: true,
           },
+          {
+            text: "go for college dorm which is out of your budget as of now ",
+            next: "B4",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "go for a room with sharing with another person which is cost effective but more stressful ",
+            next: "B7",
+            stress: 30,
+            money: -100,
+            correct: true,
+          },
+          
         ],
-        timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
       },
+      {
+        id: "B4",
+        question:
+          "unfortunately you cannot go for college dorm you do not have the financial capacity ( go back to choose right decision) ",
+        answers: [
+          {
+            text: "Next ",
+            next: "B3",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          
+          
+        ],
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+      },
+      {
+        id: "B5",
+        question:
+          "you chose to go for a private room but it will cost you more monthly but you will have peace time by yourself  ",
+        answers: [
+          {
+            text: "Next ",
+            next: "endPrologue",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          
+          
+        ],
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+      },
+      {
+        id: "B6",
+        question:
+          "You choose to go for hotel which is very expensive but since it is in the city you so you were  hopeful of finding accommodation and you start looking from day 1 and after day 5 you come across several option ",
+        answers: [
+          {
+            text: "go for a private room but its expensive  ",
+            next: "B5",
+            stress: 0,
+            money: 300,
+            correct: true,
+          },
+          {
+            text: "go for college dorm which cost more  ",
+            next: "B9",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "go for a room with sharing with another person which is cost effective but more stressful ",
+            next: "B7",
+            stress: 0,
+            money: -100,
+            correct: true,
+          },
+          
+          
+        ],
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+      },
+      {
+        id: "B7",
+        question:
+          "you moved in with your room in sharing with other person , and it helps you save money but now you are dealing with drama that comes with other people so you are not exactly happy about it  ",
+        answers: [
+          {
+            text: "Next ",
+            next: "endPrologue",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+         
+          
+          
+        ],
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+      },
+      {
+        id: "B8",
+        question:
+          "You decided to stay with your friends but now you do not have a lot of time so you start looking for a permanent place to stay and after searching for a week you get several options   ",
+        answers: [
+          {
+            text: "go for a private room but its expensive  ",
+            next: "B5",
+            stress: 0,
+            money: -300,
+            correct: true,
+          },
+          {
+            text: "go for college dorm which is out of your budget as of now  ",
+            next: "B10",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+          {
+            text: "go for a room with sharing with another person which is cost effective but more stressful ",
+            next: "B7",
+            stress: 0,
+            money: -100,
+            correct: true,
+          },
+         
+          
+          
+        ],
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+      },
+      {
+        id: "B9",
+        question:
+          "unfortunately you cannot go for college dorm you do not have the financial capacity   ",
+        answers: [
+          {
+            text: "go for a private room but its expensive  ",
+            next: "B6",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+         
+         
+          
+          
+        ],
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+      },
+      {
+        id: "B10",
+        question:
+          "unfortunately you cannot go for college dorm you do not have the financial capacity   ",
+        answers: [
+          {
+            text: "go for a private room but its expensive  ",
+            next: "B7",
+            stress: 0,
+            money: 0,
+            correct: true,
+          },
+         
+         
+          
+          
+        ],
+        // timeout: { next: "q_wrong_1", stress: 5, money: -50 }, // <-- Add this
+      },
+      
     ],
     startPrologue: [
       "You have arrived at toronto city of opportunities .",
@@ -420,7 +502,7 @@ var chapters = [
           {
             text: "you wait until orientation since you are excited about college ",
             next: "C8",
-            stress: 10,
+            stress: 20,
             money: 0,
             correct: true,
           },
@@ -557,17 +639,17 @@ var chapters = [
         question: "you decided to go apply in person and found 2 job offers",
         answers: [
           {
-            text: "Apply online",
+            text: "good pay but more hours  to demanded by work",
             next: "C11",
-            stress: -5,
-            money: 0,
+            stress: 15,
+            money: 200,
             correct: true,
           },
           {
-            text: "Go out apply in person",
+            text: "min pay but less demanded job ",
             next: "C7",
             stress: 10,
-            money: 0,
+            money: 100,
             correct: true,
           },
         ],
@@ -601,21 +683,21 @@ var chapters = [
           {
             text: "work weekends plus compromise 1 class on weekday",
             next: "C12",
-            stress: 20,
+            stress: 10,
             money: 0,
             correct: true,
           },
           {
             text: "work all weekdays and skip 3 classes",
             next: "C13",
-            stress: 40,
+            stress: 20,
             money: 0,
             correct: true,
           },
           {
             text: "skip 2 classes and work one weekend",
             next: "C14",
-            stress: 30,
+            stress: 25,
             money: 0,
             correct: true,
           },
@@ -657,7 +739,7 @@ var chapters = [
           {
             text: "Next",
             next: "C16",
-            stress: 10,
+            stress: 5,
             money: 0,
             correct: true,
           },
