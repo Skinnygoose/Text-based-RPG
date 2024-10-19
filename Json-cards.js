@@ -518,19 +518,19 @@ var chapters = [
       {
         id: "C2",
         question:
-          "you start looking for job you have asked your friends or roommates for advice and two possinle ways lie ahead of you",
+          "you start looking for job you have asked your friends or roommates for advice and two possible ways lie ahead of you",
         answers: [
           {
             text: "Apply online ",
             next: "C3",
-            stress: 20,
+            stress: 10,
             money: 0,
             correct: true,
           },
           {
             text: "Go out and apply in person",
             next: "C5",
-            stress: 10,
+            stress: 20,
             money: 0,
             correct: true,
           },
@@ -544,7 +544,7 @@ var chapters = [
           {
             text: "Next",
             next: "C4",
-            stress: 10,
+            stress: 20,
             money: 0,
             correct: true,
           },
@@ -558,7 +558,7 @@ var chapters = [
           {
             text: "Next",
             next: "C8",
-            stress: 10,
+            stress: 5,
             money: 0,
             correct: true,
           },
@@ -573,14 +573,14 @@ var chapters = [
             text: "good pay good hours but start immediately",
             next: "C6",
             stress: 20,
-            money: 600,
+            money: 500,
             correct: true,
           },
           {
             text: "pay is not decent but can start after convocation",
             next: "C7",
-            stress: 300,
-            money: 0,
+            stress: 10,
+            money: 100,
             correct: true,
           },
         ],
@@ -593,8 +593,8 @@ var chapters = [
           {
             text: "Next",
             next: "C11",
-            stress: 5,
-            money: 100,
+            stress: 10,
+            money: 0,
             correct: true,
           },
         ],
@@ -608,7 +608,7 @@ var chapters = [
             text: "Next",
             next: "C12",
             stress: -20,
-            money: 300,
+            money: 0,
             correct: true,
           },
         ],
@@ -619,16 +619,16 @@ var chapters = [
           "you meet new friends had a good first day but problem of job still remains time is short before next month .",
         answers: [
           {
-            text: "Apply online",
+            text: "Apply online again",
             next: "C19",
-            stress: -5,
+            stress: 10,
             money: 0,
             correct: true,
           },
           {
             text: "Go out apply in person",
             next: "C9",
-            stress: -10,
+            stress: 10,
             money: 0,
             correct: true,
           },
@@ -642,7 +642,7 @@ var chapters = [
             text: "good pay but more hours  to demanded by work",
             next: "C11",
             stress: 15,
-            money: 200,
+            money: 500,
             correct: true,
           },
           {
@@ -656,20 +656,20 @@ var chapters = [
       },
       {
         id: "C19",
-        question: "you decided to go apply online and found 2 job offers",
+        question: "you decided to go apply online again and found 2 job offers",
         answers: [
           {
             text: "Good pay but more hours  to demanded by work",
             next: "C11",
-            stress: -5,
-            money: 0,
+            stress: 20,
+            money: 500,
             correct: true,
           },
           {
             text: "min pay but less demanded job",
             next: "C12",
             stress: 10,
-            money: 0,
+            money: 200,
             correct: true,
           },
         ],
@@ -711,7 +711,7 @@ var chapters = [
           {
             text: "Next",
             next: "C16",
-            stress: -20,
+            stress: -10,
             money: 0,
             correct: true,
           },
@@ -781,7 +781,7 @@ var chapters = [
           {
             text: "try to manage with layering up with your own clothes ",
             next: "C17",
-            stress: 5,
+            stress: 25,
             money: 0,
             correct: true,
           },
@@ -789,14 +789,14 @@ var chapters = [
             text: "Buy only jacket   ",
             next: "C18",
             stress: -5,
-            money: -200,
+            money: -300,
             correct: true,
           },
           {
             text: "Buy both jacket and winter shoes  ",
             next: "C26",
             stress: 0,
-            money: -500,
+            money: -800,
             correct: true,
           },
         ],
@@ -809,7 +809,7 @@ var chapters = [
           {
             text: "Next",
             next: "endPrologue1",
-            stress: 0,
+            stress: 20,
             money: 0,
             correct: true,
           },
@@ -822,7 +822,7 @@ var chapters = [
         answers: [
           {
             text: "Next ",
-            next: "endPrologue1",
+            next: "endPrologue",
             stress: 0,
             money: 0,
             correct: true,
@@ -913,7 +913,7 @@ var chapters = [
           {
             text: "Next",
             next: "D5", // Return to correct path
-            stress: 0,
+            stress: -20,
             money: 20,
             correct: true,
           },
@@ -941,7 +941,7 @@ var chapters = [
           {
             text: "accept the beer and drink to socialize",
             next: "D6", // Return to correct path
-            stress: 20,
+            stress: 40,
             money: 0,
             correct: true,
           },
@@ -960,9 +960,9 @@ var chapters = [
           "To not offend your newly made friends you could not decline and gave in too peer pressure and drank beer for the first time and now you feel super guilty",
         answers: [
           {
-            text: "accept the beer and drink to socialize",
+            text: "Next",
             next: "D10", // Return to correct path
-            stress: 20,
+            stress: 10,
             money: 0,
             correct: true,
           },
@@ -1020,7 +1020,7 @@ var chapters = [
       {
         id: "D10",
         question:
-          "you had a good time overall and went back to home after that   ",
+          "you had a good time overall and went back to home after that but you carry a heavy guitl in your heart  ",
         answers: [
           {
             text: "Next ",
@@ -1048,7 +1048,7 @@ var chapters = [
       {
         id: "D12",
         question:
-          "You have to plan ahead , what you want to do you have mixed feelings ,as much as you want to celebrate being alone comes with its challenges   ",
+          "You have to plan ahead , you have mixed feelings ,as much as you want to celebrate being alone comes with its challenges   ",
         answers: [
           {
             text: "Next ",
@@ -1067,14 +1067,14 @@ var chapters = [
           {
             text: "take off from work on that day ",
             next: "D14", // Return to correct path
-            stress: 0,
+            stress: -20,
             money: -100,
             correct: true,
           },
           {
             text: "Go to work on that day  ",
             next: "D20", // Return to correct path
-            stress: 0,
+            stress: -10,
             money: 200,
             correct: true,
           },
@@ -1088,7 +1088,7 @@ var chapters = [
           {
             text: "Next ",
             next: "D15", // Return to correct path
-            stress: 0,
+            stress: 15,
             money: 0,
             correct: true,
           },
@@ -1102,14 +1102,14 @@ var chapters = [
           {
             text: "call home and talk to family  ",
             next: "D18", // Return to correct path
-            stress: -10,
+            stress: -20,
             money: 0,
             correct: true,
           },
           {
             text: "Go to nearest mosque and try to meet up within your community ",
             next: "D16", // Return to correct path
-            stress: 0,
+            stress: -10,
             money: -50,
             correct: true,
           },
@@ -1137,7 +1137,7 @@ var chapters = [
           {
             text: "Next ",
             next: "D19", // Return to correct path
-            stress: -5,
+            stress: -10,
             money: 0,
             correct: true,
           },
@@ -1166,7 +1166,7 @@ var chapters = [
             text: "Next ",
             next: "D19", // Return to correct path
             stress: 10,
-            money: 0,
+            money: 200,
             correct: true,
           },
         ],
@@ -1213,8 +1213,8 @@ var chapters = [
           {
             text: "Next ",
             next: "D24", // Return to correct path
-            stress: 0,
-            money: 0,
+            stress: -5,
+            money: -20,
             correct: true,
           },
         ],

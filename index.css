@@ -32,12 +32,12 @@ body {
 }
 
 #stress-bar {
-  left: 10px; /* Adjust as needed */
+  left: 30px; /* Adjust as needed */
   background-color: red; /* Color for stress */
 }
 
 #money-bar {
-  right: 10px; /* Adjust as needed */
+  right: 30px; /* Adjust as needed */
 }
 .monologue{
   z-index: 0;
